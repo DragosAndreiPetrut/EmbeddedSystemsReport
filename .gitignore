@@ -1,0 +1,18 @@
+# virtualenv / python
+lane_env/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# big / generated stuff
+*.so
+*.bin
+*.mp4
+*.zip
+*.tar
+*.tar.gz
+
+# OS/editor
+.DS_Store
+.vscode/
