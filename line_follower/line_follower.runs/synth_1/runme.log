@@ -1,0 +1,272 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dragos/lane_project/lane_linear_ip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top design_1_wrapper -part xczu3eg-sbva484-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 290505
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2714.086 ; gain = 29.906 ; free physical = 2445 ; free virtual = 23389
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (1#1) [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_axi_gpio_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'gpio_io_o' of module 'design_1_axi_gpio_0_0' is unconnected for instance 'axi_gpio_0' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:95]
+WARNING: [Synth 8-7023] instance 'axi_gpio_0' of module 'design_1_axi_gpio_0_0' has 20 connections declared, but only 19 given [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:95]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:115]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (2#1) [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_lane_linear_ip_0_1' [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_lane_linear_ip_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_lane_linear_ip_0_1' (3#1) [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_lane_linear_ip_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (4#1) [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:158]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:158]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:158]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:158]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:158]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_2' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:292]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:862]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (5#1) [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:862]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:1008]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (6#1) [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:1008]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:1154]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (7#1) [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (8#1) [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:1154]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (9#1) [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_2' (10#1) [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:292]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_2' [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_zynq_ultra_ps_e_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_2' (11#1) [/home/dragos/line_follower/line_follower.runs/synth_1/.Xil/Vivado-290398-dragos-Lenovo-Legion-5-17ARH05H/realtime/design_1_zynq_ultra_ps_e_0_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'design_1_zynq_ultra_ps_e_0_2' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:249]
+WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'design_1_zynq_ultra_ps_e_0_2' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:249]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_2' has 42 connections declared, but only 40 given [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:249]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_0'. This will prevent further optimization [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:95]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps8_0_axi_periph'. This will prevent further optimization [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:165]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (12#1) [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (13#1) [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2759.992 ; gain = 75.812 ; free physical = 3229 ; free virtual = 24174
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2775.836 ; gain = 91.656 ; free physical = 3223 ; free virtual = 24168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2775.836 ; gain = 91.656 ; free physical = 3223 ; free virtual = 24168
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2775.836 ; gain = 0.000 ; free physical = 3219 ; free virtual = 24163
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_2/design_1_zynq_ultra_ps_e_0_2/design_1_zynq_ultra_ps_e_0_2_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_2/design_1_zynq_ultra_ps_e_0_2/design_1_zynq_ultra_ps_e_0_2_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Finished Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Finished Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Finished Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_lane_linear_ip_0_1/design_1_lane_linear_ip_0_1/design_1_lane_linear_ip_0_1_in_context.xdc] for cell 'design_1_i/lane_linear_ip_0'
+Finished Parsing XDC File [/home/dragos/line_follower/line_follower.gen/sources_1/bd/design_1/ip/design_1_lane_linear_ip_0_1/design_1_lane_linear_ip_0_1/design_1_lane_linear_ip_0_1_in_context.xdc] for cell 'design_1_i/lane_linear_ip_0'
+Parsing XDC File [/home/dragos/line_follower/line_follower.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/dragos/line_follower/line_follower.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2859.680 ; gain = 0.000 ; free physical = 3144 ; free virtual = 24089
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2859.680 ; gain = 0.000 ; free physical = 3144 ; free virtual = 24089
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2859.680 ; gain = 175.500 ; free physical = 3218 ; free virtual = 24162
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2859.680 ; gain = 175.500 ; free physical = 3218 ; free virtual = 24162
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/proc_sys_reset_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/lane_linear_ip_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2859.680 ; gain = 175.500 ; free physical = 3218 ; free virtual = 24162
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2859.680 ; gain = 175.500 ; free physical = 3218 ; free virtual = 24163
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.680 ; gain = 175.500 ; free physical = 3207 ; free virtual = 24155
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:42 . Memory (MB): peak = 3313.094 ; gain = 628.914 ; free physical = 2645 ; free virtual = 23594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:42 . Memory (MB): peak = 3313.094 ; gain = 628.914 ; free physical = 2645 ; free virtual = 23594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:42 . Memory (MB): peak = 3333.133 ; gain = 648.953 ; free physical = 2643 ; free virtual = 23591
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 3339.070 ; gain = 654.891 ; free physical = 2643 ; free virtual = 23592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 3339.070 ; gain = 654.891 ; free physical = 2643 ; free virtual = 23592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 3339.070 ; gain = 654.891 ; free physical = 2643 ; free virtual = 23592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 3339.070 ; gain = 654.891 ; free physical = 2643 ; free virtual = 23592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 3339.070 ; gain = 654.891 ; free physical = 2643 ; free virtual = 23592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 3339.070 ; gain = 654.891 ; free physical = 2643 ; free virtual = 23592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |design_1_xbar_0              |         1|
+|2     |design_1_auto_pc_0           |         1|
+|3     |design_1_axi_gpio_0_0        |         1|
+|4     |design_1_ila_0_0             |         1|
+|5     |design_1_lane_linear_ip_0_1  |         1|
+|6     |design_1_proc_sys_reset_0_0  |         1|
+|7     |design_1_zynq_ultra_ps_e_0_2 |         1|
++------+-----------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |design_1_auto_pc           |     1|
+|2     |design_1_axi_gpio_0        |     1|
+|3     |design_1_ila_0             |     1|
+|4     |design_1_lane_linear_ip_0  |     1|
+|5     |design_1_proc_sys_reset_0  |     1|
+|6     |design_1_xbar              |     1|
+|7     |design_1_zynq_ultra_ps_e_0 |     1|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 3339.070 ; gain = 654.891 ; free physical = 2643 ; free virtual = 23592
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:39 . Memory (MB): peak = 3339.070 ; gain = 571.047 ; free physical = 2683 ; free virtual = 23631
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 3339.078 ; gain = 654.891 ; free physical = 2683 ; free virtual = 23631
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3339.078 ; gain = 0.000 ; free physical = 2678 ; free virtual = 23626
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3361.852 ; gain = 0.000 ; free physical = 2708 ; free virtual = 23656
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:57 . Memory (MB): peak = 3375.789 ; gain = 1000.008 ; free physical = 2840 ; free virtual = 23789
+INFO: [Common 17-1381] The checkpoint '/home/dragos/line_follower/line_follower.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan  2 15:25:34 2026...
